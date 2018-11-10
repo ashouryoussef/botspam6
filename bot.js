@@ -1,13 +1,22 @@
-const Discord = require('discord.js');
+ const Discord = require('discord.js');
 const client = new Discord.Client();
 console.log("Scrpit By Dream");
 
 
 client.on("ready", () => {
-let channel =     client.channels.get("510213786465206272")
+let channel =     client.channels.get("510213741204340751")
 setInterval(function() {
-channel.send(`3bker fo2rerererererererererererere`);
+channel.send(`3bker up 3bker up 3bker up 3bker up 3bker up`);
 }, 30)
 })
 
-client.login(process.env.BOT_TOKEN);
+
+client.on("message", function(message) {
+    var args = message.content.split(/ +/g);
+    var command = args.shift()
+    
+    if(command == "6s") {
+        message.channel.send(args.slice(1, args.length).join(" "))    
+    }
+});
+client.login(process.env.BOT_TOKEN); 
